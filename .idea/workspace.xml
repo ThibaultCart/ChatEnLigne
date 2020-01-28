@@ -18,6 +18,11 @@
     </execution>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ThibaultCart &lt;43812982+thibaultcart@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1X1ST9z9dDEIY7mrjCg7mhBEo6d" />
@@ -32,7 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../open_day" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -64,6 +69,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580225918250">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580225918250" />
+    <state x="465" y="100" key="CommitChangelistDialog2" timestamp="1580225947533">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="465" y="100" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580225947533" />
     <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1580217153269">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -72,9 +85,17 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="254" y="433" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580212584555" />
-    <state x="682" y="148" key="SettingsEditor" timestamp="1580223675296">
+    <state x="500" y="150" key="SettingsEditor" timestamp="1580225942018">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="682" y="148" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580223675296" />
+    <state x="500" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580225942018" />
+    <state x="432" y="239" key="Vcs.Push.Dialog.v2" timestamp="1580225894123">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="432" y="239" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580225894123" />
+    <state x="649" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580225916000">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="649" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580225916000" />
   </component>
 </project>
