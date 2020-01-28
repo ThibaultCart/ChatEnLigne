@@ -24,7 +24,7 @@ if (isset($_POST["submitInscription"])) {
     } else {
         $valid = true;
     }
-    if ($email == null || $date == null || $mdp1 == null || $pseudo == null || mdp2 == null || date == null) {
+    if (is_null($email) || is_null($date)|| is_null($mdp2) || is_null($pseudo) || is_null($mdp1)) {
 
         echo '<script>alert("un ou plusieurs champs sont vide");</script>';
         $valid = false;
@@ -35,7 +35,7 @@ if (isset($_POST["submitInscription"])) {
 
     // si les données saisie sont conforme on commence l'inscription
     if ($valid == true) {
-
+        inscription($email,$pseudo,$mdp1,$date);
     } else {
 
     }
