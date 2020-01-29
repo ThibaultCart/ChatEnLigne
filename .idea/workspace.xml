@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f14076b6-446d-4690-aa53-40de663af300" name="Default Changelist" comment="" />
+    <list default="true" id="f14076b6-446d-4690-aa53-40de663af300" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../open_day" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="ServiceViewManager">
@@ -57,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580212112040</updated>
       <workItem from="1580212113135" duration="5713000" />
+      <workItem from="1580284910741" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journée">
       <created>1580225891191</created>
