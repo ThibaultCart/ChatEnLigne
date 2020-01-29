@@ -7,9 +7,9 @@ Node.js est nécessasire afin de lancer Socket.io (la framework sur laquelle le 
 Il suffit de télécharger Node.js sur votre poste ou sur votre serveur.
 
 ## Installation
-Téléchargez le projet.
-Ouvrez le terminal de commande à l'emplacement du projet.
-Entrez 
+1. Téléchargez le projet.
+2. Ouvrez le terminal de commande à l'emplacement du projet.
+3. Entrez 
 ```sh
 node index
 ```
