@@ -1,4 +1,4 @@
-# ChatEnLigne
+# ChatEnLigne / ChatUp
 Une application WEB possèdant un chat publique commun à tous. Les membres doivent être connectés afin de pouvoir rejoindre le chat.
 
 ## Dépendences
