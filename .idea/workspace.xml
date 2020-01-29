@@ -34,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../open_day" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="ServiceViewManager">
@@ -61,6 +61,7 @@
       <updated>1580212112040</updated>
       <workItem from="1580212113135" duration="5713000" />
       <workItem from="1580284910741" duration="594000" />
+      <workItem from="1580290013024" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journée">
       <created>1580225891191</created>
@@ -96,18 +97,18 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="465" y="100" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580225976364" />
-    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1580217153269">
+    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1580290587728">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1580217153269" />
+    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1580290587728" />
     <state x="254" y="433" key="NewPhpFileDialog" timestamp="1580212584555">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="254" y="433" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580212584555" />
-    <state x="500" y="150" key="SettingsEditor" timestamp="1580225942018">
+    <state x="500" y="150" key="SettingsEditor" timestamp="1580290545525">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="500" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580225942018" />
+    <state x="500" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580290545525" />
     <state x="432" y="239" key="Vcs.Push.Dialog.v2" timestamp="1580225978165">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

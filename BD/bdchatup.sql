@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 28 jan. 2020 à 16:12
+-- Généré le :  mer. 29 jan. 2020 à 10:38
 -- Version du serveur :  5.7.17
 -- Version de PHP :  5.6.30
 
@@ -46,7 +46,8 @@ CREATE TABLE `user` (
   `Pseudo` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `Password` varchar(50) NOT NULL,
-  `dateNaissance` date NOT NULL
+  `dateNaissance` date NOT NULL,
+  `salt` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
