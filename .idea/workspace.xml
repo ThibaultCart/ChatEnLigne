@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f14076b6-446d-4690-aa53-40de663af300" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
-    </list>
+    <list default="true" id="f14076b6-446d-4690-aa53-40de663af300" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +67,7 @@
       <workItem from="1580290013024" duration="4373000" />
       <workItem from="1580887553508" duration="6590000" />
       <workItem from="1580895173711" duration="2077000" />
+      <workItem from="1580897906636" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journée">
       <created>1580225891191</created>
@@ -85,7 +83,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580225976717</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modification mineur">
+      <created>1580897931502</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580897931502</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modification mineur">
+      <created>1580897957323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580897957323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,17 +106,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fin de journée" />
     <MESSAGE value="fin de journée 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="fin de journée 2.0" />
+    <MESSAGE value="modification mineur" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification mineur" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580888767758">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580888767758" />
-    <state x="465" y="100" key="CommitChangelistDialog2" timestamp="1580897949733">
+    <state x="465" y="100" key="CommitChangelistDialog2" timestamp="1580897956902">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="465" y="100" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580897949733" />
+    <state x="465" y="100" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580897956902" />
     <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1580290587728">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -117,10 +130,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="500" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580291534912" />
-    <state x="432" y="239" key="Vcs.Push.Dialog.v2" timestamp="1580897934486">
+    <state x="432" y="239" key="Vcs.Push.Dialog.v2" timestamp="1580897959500">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="239" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580897934486" />
+    <state x="432" y="239" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580897959500" />
     <state x="649" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580225916000">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
