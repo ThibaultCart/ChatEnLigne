@@ -68,7 +68,8 @@
       <workItem from="1580212113135" duration="5713000" />
       <workItem from="1580284910741" duration="594000" />
       <workItem from="1580290013024" duration="4373000" />
-      <workItem from="1580887553508" duration="6525000" />
+      <workItem from="1580887553508" duration="6590000" />
+      <workItem from="1580895173711" duration="2077000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journée">
       <created>1580225891191</created>
@@ -124,5 +125,20 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="649" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580225916000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/requete.php</url>
+          <line>5</line>
+          <properties>
+            <option name="className" value="" />
+            <option name="methodName" value="\inscription" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

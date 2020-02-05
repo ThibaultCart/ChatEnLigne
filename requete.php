@@ -12,6 +12,7 @@ function inscription($email, $pseudo, $mdp, $ladate)
     $dataOk = true;
 //changement du format de la date
     $ladate2 = strtotime($ladate);
+
     $ladate = date("Y-m-d", $ladate2);
 
 
@@ -30,7 +31,7 @@ function inscription($email, $pseudo, $mdp, $ladate)
     if ($dataOk == true) {
         //si les enregistrements ne sont pas des doublons
         //on crypte le sel en sha1
-        $sel = generateRandomString();
+        $sel = GenerateRandomString();
         $sel = sha1($sel);
         //on crypte le mot de passe et lui ajoutant le sel crypter (toujour en sha 1)
         $mdphash = Encrypt($mdp, $sel);
@@ -83,7 +84,7 @@ function AddUser($email, $pseudo, $mdp, $salt, $date)
 
 
 //Permet de genérer un sel aléatoire
-function generateRandomString($length = 10)
+function GenerateRandomString($length = 10)
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -108,9 +109,8 @@ function GetEmail($email)
     $request->bindParam(":email", $email, PDO::PARAM_STR);
     $request->execute();
 
-     return $request->fetch(PDO::FETCH_ASSOC);
+    return $request->fetch(PDO::FETCH_ASSOC);
 }
-
 
 
 // Crypter le mot de passe
@@ -130,30 +130,37 @@ function connexion($email, $mdpConnexion)
 
 
     $connexionPossible = false;
-
+// verifie que le mail et le mdp sois remplis
     if ($email != null || $mdpConnexion != null || $mdpConnexion != "" || $email != "") {
         $connexionPossible = false;
     }
     $ismailValide = GetEmail($email);
+    //check si un compte est lié a cet email
+
     if ($ismailValide != null) {
         $connexionPossible = true;
 
     }
+    //si le mail correspond et que le mdp n est pas vide on commence la procedure de connexion
     if ($connexionPossible == true) {
-
-        $allinfo = getallinfo($email);
+// on recupere toutes le données de la base orrespondant a notre email
+        $allinfo = GetInfoAll($email);
         var_dump($allinfo);
         $salt = $allinfo["salt"];
         $mdphash = $allinfo["Password"];
+        //on ajoute le sel et on hash le mots de passe saisie
         $concMdpHash = $mdpConnexion + $salt;
         $mdpSaisie = sha1($concMdpHash);
+        //on compare les deux mots de passe
         if ($mdpSaisie == $mdphash) {
+            // si ils sont identique on mets certaines valeur dans une variable de session et on redirige vers la page chat.php
             $_SESSION["Pseudo"] = $allinfo["Pseudo"];
             $_SESSION["mail"] = $email;
             $_SESSION["idUser"] = $allinfo["idUser"];
 
             header("location:chat.php");
         } else {
+            // sinon on mets une alert comme quoi le mots de passe et le mail ne corresponde a aucun compte
             echo '<script>alert("Votre adresse mail et le mot de passe de correspondent pas");</script>';
         }
 
@@ -161,7 +168,8 @@ function connexion($email, $mdpConnexion)
 
 
 }
-function getallinfo($email)
+
+function GetInfoAll($email)
 {
     //cherche dans la base le sel
     $sql = "SELECT `idUser`,`Pseudo`,`Password`,`salt` 
@@ -174,7 +182,6 @@ function getallinfo($email)
 
     return $request->fetch(PDO::FETCH_ASSOC);
 }
-
 
 
 ?>
