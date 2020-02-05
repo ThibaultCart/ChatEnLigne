@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f14076b6-446d-4690-aa53-40de663af300" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M306-Mandat_2020 .docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~WRL3274.tmp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +38,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../open_day" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="ServiceViewManager">
@@ -61,7 +71,8 @@
       <updated>1580212112040</updated>
       <workItem from="1580212113135" duration="5713000" />
       <workItem from="1580284910741" duration="594000" />
-      <workItem from="1580290013024" duration="610000" />
+      <workItem from="1580290013024" duration="4373000" />
+      <workItem from="1580887553508" duration="6040000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journée">
       <created>1580225891191</created>
@@ -89,10 +100,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="fin de journée 2.0" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580225918250">
+    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580888767758">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580225918250" />
+    <state x="294" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580888767758" />
     <state x="465" y="100" key="CommitChangelistDialog2" timestamp="1580225976364">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -101,14 +112,14 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1580290587728" />
-    <state x="254" y="433" key="NewPhpFileDialog" timestamp="1580212584555">
+    <state x="254" y="433" key="NewPhpFileDialog" timestamp="1580891752118">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="254" y="433" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580212584555" />
-    <state x="500" y="150" key="SettingsEditor" timestamp="1580290545525">
+    <state x="254" y="433" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580891752118" />
+    <state x="500" y="150" key="SettingsEditor" timestamp="1580291534912">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="500" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580290545525" />
+    <state x="500" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1580291534912" />
     <state x="432" y="239" key="Vcs.Push.Dialog.v2" timestamp="1580225978165">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

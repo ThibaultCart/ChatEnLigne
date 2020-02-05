@@ -7,8 +7,15 @@ require_once "requete.php";
 // Variable
 
 if (isset($_POST["submitLogin"])) {
-
+    $email = filter_input(INPUT_POST, 'umail', FILTER_SANITIZE_EMAIL);
+    $mdpConnexion = filter_input(INPUT_POST, 'pswConnexion', FILTER_SANITIZE_STRING);
+    if (is_null($email)||is_null($mdpConnexion)) {
+        echo '<script>alert("Merci de remplire les champs");</script>';
+    }else{
+        connexion($email,$mdpConnexion);
+    }
 }
+
 
 if (isset($_POST["submitInscription"])) {
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -17,14 +24,14 @@ if (isset($_POST["submitInscription"])) {
     $mdp1 = filter_input(INPUT_POST, 'psw', FILTER_SANITIZE_STRING);
     $mdp2 = filter_input(INPUT_POST, 'ConfPsw', FILTER_SANITIZE_STRING);
     $valid = false;
-    if ($mdp1 != $mdp2&&$mdp1!=""&&$mdp2!="") {
+    if ($mdp1 != $mdp2 && $mdp1 != "" && $mdp2 != "") {
         echo '<script>alert("Les Mots de passe ne correspondent pas");</script>';
 
         $valid = false;
     } else {
         $valid = true;
     }
-    if (is_null($email) || is_null($date)|| is_null($mdp2) || is_null($pseudo) || is_null($mdp1)) {
+    if (is_null($email) || is_null($date) || is_null($mdp2) || is_null($pseudo) || is_null($mdp1)) {
 
         echo '<script>alert("un ou plusieurs champs sont vide");</script>';
         $valid = false;
@@ -35,7 +42,7 @@ if (isset($_POST["submitInscription"])) {
 
     // si les données saisie sont conforme on commence l'inscription
     if ($valid == true) {
-        inscription($email,$pseudo,$mdp1,$date);
+        inscription($email, $pseudo, $mdp1, $date);
     } else {
 
     }
@@ -59,6 +66,7 @@ if (isset($_POST["submitInscription"])) {
     <br>
     <button onclick="document.getElementById('id02').style.display = 'block'" style="width:500px;">Inscription</button>
 </fieldset>
+<!---- Form Connexion-->
 <div id="id01" class="modal">
 
     <form class="modal-content animate" action="index.php" method="post">
@@ -68,11 +76,11 @@ if (isset($_POST["submitInscription"])) {
         </div>
 
         <div class="container">
-            <label for="uname"><b>Utilisateur</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="umail"><b>Votre Email</b></label>
+            <input type="email" placeholder="Votre Email" name="umail" required>
 
             <label for="psw"><b>Mot de passe</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Votre Mots de passe" name="pswConnexion" required>
 
             <button type="submit" name="submitLogin">Login</button>
             <label>
@@ -88,6 +96,8 @@ if (isset($_POST["submitInscription"])) {
         </div>
     </form>
 </div>
+
+<!---- Form Inscription-->
 <div id="id02" class="modal">
 
     <form class="modal-content animate" action="index.php" method="post">
