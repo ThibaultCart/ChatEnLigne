@@ -108,7 +108,7 @@ function GetEmail($email)
     $request->bindParam(":email", $email, PDO::PARAM_STR);
     $request->execute();
 
-    return $request->fetch(PDO::FETCH_ASSOC);
+     return $request->fetch(PDO::FETCH_ASSOC);
 }
 
 
