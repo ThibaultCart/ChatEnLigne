@@ -9,7 +9,7 @@ require_once "requete.php";
 if (isset($_POST["submitLogin"])) {
     // recupere les données envoyer par le form
     $email = filter_input(INPUT_POST, 'umail', FILTER_SANITIZE_EMAIL);
-    $mdpConnexion = filter_input(INPUT_POST, 'psswConnexion', FILTER_SANITIZE_STRING);
+    $mdpConnexion = filter_input(INPUT_POST, 'pswConnexion', FILTER_SANITIZE_STRING);
     if (is_null($email) || is_null($mdpConnexion)) {
         echo '<script>alert("Merci de remplire les champs");</script>';
     } else {
