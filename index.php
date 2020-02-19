@@ -4,26 +4,32 @@ require_once "requete.php";
 
 <?php
 
-// Variable
 
+// si le form de connexion est validé
 if (isset($_POST["submitLogin"])) {
+    // recupere les données envoyer par le form
     $email = filter_input(INPUT_POST, 'umail', FILTER_SANITIZE_EMAIL);
-    $mdpConnexion = filter_input(INPUT_POST, 'pswConnexion', FILTER_SANITIZE_STRING);
-    if (is_null($email)||is_null($mdpConnexion)) {
+    $mdpConnexion = filter_input(INPUT_POST, 'psswConnexion', FILTER_SANITIZE_STRING);
+    if (is_null($email) || is_null($mdpConnexion)) {
         echo '<script>alert("Merci de remplire les champs");</script>';
-    }else{
-        connexion($email,$mdpConnexion);
+    } else {
+        connexion($email, $mdpConnexion);
+
+
     }
 }
 
+// si le form d'inscription est validé
 
 if (isset($_POST["submitInscription"])) {
+    // recupere les données envoyer par le form
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $date = filter_input(INPUT_POST, 'dateNaissance', FILTER_SANITIZE_STRING);
     $pseudo = filter_input(INPUT_POST, 'uname', FILTER_SANITIZE_STRING);
     $mdp1 = filter_input(INPUT_POST, 'psw', FILTER_SANITIZE_STRING);
     $mdp2 = filter_input(INPUT_POST, 'ConfPsw', FILTER_SANITIZE_STRING);
     $valid = false;
+    //Check si les mdp sont identique et pas null
     if ($mdp1 != $mdp2 && $mdp1 != "" && $mdp2 != "") {
         echo '<script>alert("Les Mots de passe ne correspondent pas");</script>';
 
@@ -31,7 +37,18 @@ if (isset($_POST["submitInscription"])) {
     } else {
         $valid = true;
     }
+// check si le format du mail est correct (si l'user trifatouille dans le code html)
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+    } else {
+        $valid = false;
+        //affiche en message d'alert l'erreur
+
+        echo '<script>alert("Merci de saisir un email dans un format valide");</script>';
+    }
+//si un des champs saisie est vide
     if (is_null($email) || is_null($date) || is_null($mdp2) || is_null($pseudo) || is_null($mdp1)) {
+        //affiche en message d'alert l'erreur
 
         echo '<script>alert("un ou plusieurs champs sont vide");</script>';
         $valid = false;
@@ -39,12 +56,22 @@ if (isset($_POST["submitInscription"])) {
         $valid = true;
     }
 
+//efface toutes les valeurs présentes dans le post
+    if (count($_POST) > 0) {
+        foreach ($_POST as $k => $v) {
+            unset($_POST[$k]);
+        }
+    }
 
-    // si les données saisie sont conforme on commence l'inscription
+// si les données saisie sont conforme on commence l'inscription
     if ($valid == true) {
-        inscription($email, $pseudo, $mdp1, $date);
-    } else {
+        $erreur = inscription($email, $pseudo, $mdp1, $date);
 
+        if ($erreur != null) {
+            //affiche en message d'alert l'erreur
+            echo '<script>alert("' . $erreur . '");</script>';
+
+        }
     }
 
 }

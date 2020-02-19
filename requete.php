@@ -6,7 +6,7 @@ require_once "connexion.php";
 function inscription($email, $pseudo, $mdp, $ladate)
 {
 
-
+    $erreur=null;
     $mailDejautiliser = GetEmail($email);
     $pseudodejautiliser = GetPseudo($pseudo);
     $dataOk = true;
@@ -18,13 +18,13 @@ function inscription($email, $pseudo, $mdp, $ladate)
 
     //on check si l'utilisateur n'est pas deja inscrit avec se mail et/ou se pseudo
     if ($mailDejautiliser != null) {
-        //affiche l'erreur a l'utilisateur avec une alert
-        echo '<script>alert("Votre adresse mail est deja utilisé");</script>';
+        //donne a la variable erreur l'erreur
+       $erreur="Votre adresse mail est deja utilisé";
         $dataOk = false;
     }
     if ($pseudodejautiliser != null) {
-        //affiche l'erreur a l'utilisateur avec une alert
-        echo '<script>alert("Votre Pseudo est deja utilisé");</script>';
+        //donne a la variable erreur l'erreur
+        $erreur="Votre Pseudo est deja utilisé";
         $dataOk = false;
     }
 
@@ -35,14 +35,15 @@ function inscription($email, $pseudo, $mdp, $ladate)
         $sel = sha1($sel);
         //on crypte le mot de passe et lui ajoutant le sel crypter (toujour en sha 1)
         $mdphash = Encrypt($mdp, $sel);
+        // on appele la fonction qui ajoute les user dans la table
         AddUser($email, $pseudo, $mdphash, $sel, $ladate);
 
     }
-    //efface toutes les valeurs présentes dans le post
-    if (count($_POST) > 0) {
-        foreach ($_POST as $k => $v) {
-            unset($_POST[$k]);
-        }
+    //si une erreur a été detecter on la return si pas d'erreur on return null
+    if($erreur!=null){
+        return $erreur;
+    }else{
+        return null;
     }
 
 }

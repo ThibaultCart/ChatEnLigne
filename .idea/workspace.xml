@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f14076b6-446d-4690-aa53-40de663af300" name="Default Changelist" comment="" />
+    <list default="true" id="f14076b6-446d-4690-aa53-40de663af300" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CahierDesChargesChatUp.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CahierDesChargesChatUp.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requete.php" beforeDir="false" afterPath="$PROJECT_DIR$/requete.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +74,8 @@
       <workItem from="1580887553508" duration="6590000" />
       <workItem from="1580895173711" duration="2077000" />
       <workItem from="1580897906636" duration="66000" />
+      <workItem from="1580974258549" duration="19000" />
+      <workItem from="1582098875061" duration="4121000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journée">
       <created>1580225891191</created>
@@ -118,10 +126,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="465" y="100" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580897956902" />
-    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1580290587728">
+    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1580974275532">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1580290587728" />
+    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1580974275532" />
     <state x="254" y="433" key="NewPhpFileDialog" timestamp="1580891752118">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -138,20 +146,5 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="649" y="423" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580225916000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/requete.php</url>
-          <line>5</line>
-          <properties>
-            <option name="className" value="" />
-            <option name="methodName" value="\inscription" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
