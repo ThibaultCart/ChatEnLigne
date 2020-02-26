@@ -1,3 +1,12 @@
+<?php
+require_once "requete.php";
+if(isset($_POST["logout"])){
+  Deconnexion();
+} 
+
+?>
+
+
 <!doctype html>
 <html>
   <head>
@@ -22,8 +31,15 @@
   </head>
   <body>
     <ul id="messages"></ul>
-    <form action="">
+    <form action="chat.php" methode="POST" >
       <input id="m" autocomplete="off" /><button>Send</button>
+     
+
     </form>
+    <form action="chat.php" method="POST">
+    <input id="m" autocomplete="off" type="hidden" /><button>Send</button>
+    <input name="logout" type="hidden" value="logout" />
+    
+</form>
   </body>
 </html>
