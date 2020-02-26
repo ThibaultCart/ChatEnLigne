@@ -28,7 +28,7 @@ npm install socket.io
 ## Résultat attendu 
 
 ![GitHub Logo](https://i.imgur.com/Ck6KkSt.png)
-Format: ![Imgur](url)
+Format: ![Imgur](https://i.imgur.com/Ck6KkSt.png)
 
 
 ## Installation
@@ -37,7 +37,7 @@ Format: ![Imgur](url)
 2. Ouvrez le terminal de commande à l'emplacement du projet. 
 
 ![GitHub Logo](https://i.imgur.com/8MAdNJC.png)
-Format: ![Imgur](https://i.imgur.com/L7ZBYq3.png)
+Format: ![Imgur](https://i.imgur.com/8MAdNJC.png)
 
 3. Entrez 
 
@@ -45,7 +45,6 @@ Format: ![Imgur](https://i.imgur.com/L7ZBYq3.png)
 node chat.js
 ```
 Vous devriez avoir ceci:
-https://i.imgur.com/L7ZBYq3.png
 ![GitHub Logo](https://i.imgur.com/L7ZBYq3.png)
 Format: ![Imgur](https://i.imgur.com/L7ZBYq3.png)
 
