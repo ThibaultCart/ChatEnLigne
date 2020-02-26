@@ -118,7 +118,7 @@ function GetEmail($email)
 function Encrypt($mdp, $salt)
 {
     // $retour = hash("sha256", $salt . $mdp);
-    $Concmdpsalt = $mdp + $salt;
+    $Concmdpsalt = $mdp . $salt;
     $retour = sha1($Concmdpsalt);
 
     return $retour;
@@ -150,7 +150,7 @@ function connexion($email, $mdpConnexion)
         $salt = $allinfo["salt"];
         $mdphash = $allinfo["Password"];
         //on ajoute le sel et on hash le mots de passe saisie
-        $concMdpHash = $mdpConnexion + $salt;
+        $concMdpHash = $mdpConnexion . $salt;
         $mdpSaisie = sha1($concMdpHash);
         //on compare les deux mots de passe
         if ($mdpSaisie == $mdphash) {
