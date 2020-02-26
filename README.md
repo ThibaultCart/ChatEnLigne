@@ -6,16 +6,16 @@ Cette application a été développée à partir des langages suivant : HTML, CS
 La base de donnée est développée en SQL.
 
 ## Framework
-Node.js (https://nodejs.org)
-Socket.io - Outil principale pour l'écoute asynchrone des websockets (pour le chat) (https://socket.io)
-Express - Architecture pour construire des sites avec Node.js (https://expressjs.com/)
+Node.js (https://nodejs.org).
+Socket.io - Outil principale pour l'écoute asynchrone des websockets (pour le chat) (https://socket.io).
+Express - Architecture pour construire des sites avec Node.js (https://expressjs.com/).
 
 ## Dépendences
 Suivre au pas-à-pas pour faire fonctionner le site. 
 
 ### Node.JS
 Node.js est nécessasire afin de lancer Socket.io (la framework sur laquelle le chat est basé).
-Il suffit de télécharger Node.js sur votre poste ou sur votre serveur. (https://nodejs.org)
+Il suffit de télécharger Node.js sur votre poste ou sur votre serveur. (https://nodejs.org).
 
 ### Express
 ```sh
