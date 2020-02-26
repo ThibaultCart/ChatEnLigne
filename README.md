@@ -12,6 +12,8 @@ Express - Architecture pour construire des sites avec Node.js (https://expressjs
 
 ## Dépendences
 Suivre au pas-à-pas pour faire fonctionner le site. 
+### Possibilités d'installer Node.js sur WSL (Linux subsystème)
+ce lien : https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2
 
 ### Node.JS
 Node.js est nécessasire afin de lancer Socket.io (la framework sur laquelle le chat est basé).
