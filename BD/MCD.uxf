@@ -6,20 +6,20 @@
     <coordinates>
       <x>290</x>
       <y>140</y>
-      <w>210</w>
+      <w>200</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..*
 ENVOYER</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>100</y>
+      <x>470</x>
+      <y>90</y>
       <w>200</w>
       <h>130</h>
     </coordinates>
@@ -28,7 +28,7 @@ ENVOYER</panel_attributes>
 idMessage
 DateMessage
 ContenuMessage
-idUser</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
