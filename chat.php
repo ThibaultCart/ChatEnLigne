@@ -11,7 +11,7 @@ if(isset($_POST["logout"])){
 <html>
   <head>
     <title>Chat en-ligne</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
