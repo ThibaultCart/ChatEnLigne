@@ -2,6 +2,7 @@
 session_start();
 require_once "connexion.php";
 require_once "function.php";
+
 function GetPseudo($pseudo)
 {
     //cherche dans la base si le Pseudo est deja present
@@ -17,17 +18,15 @@ function GetPseudo($pseudo)
 }
 
 // Ajouter un utilisateur
-function AddUser($email, $pseudo, $mdp, $date)
+function AddUser($email, $pseudo, $mdp)
 {
-    $sql = "INSERT INTO `user`(`Pseudo`, `Email`, `Password`,`dateNaissance`)
-            VALUES(:pseudo, :email, :password,:dateNaissance);";
+    $sql = "INSERT INTO `user`(`Pseudo`, `Email`, `Password`)
+            VALUES(:pseudo, :email, :password);";
 
     $request = connect()->prepare($sql);
     $request->bindParam(":pseudo", $pseudo, PDO::PARAM_STR);
     $request->bindParam(":email", $email, PDO::PARAM_STR);
     $request->bindParam(":password", $mdp, PDO::PARAM_STR);
-    $request->bindParam(":email", $email, PDO::PARAM_STR);
-    $request->bindParam(":dateNaissance", $date, PDO::PARAM_STR);
     $request->execute();
 
     $result = $request->fetchAll(PDO::FETCH_ASSOC);
@@ -54,10 +53,10 @@ function GetInfoAll($email)
     //cherche dans la base le sel
     $sql = "SELECT `idUser`,`Pseudo`,`Password`
     FROM `user`
-    WHERE `Email` = :leEmail ;";
+    WHERE `Email` = :Email ;";
 
     $request = connect()->prepare($sql);
-    $request->bindParam(":leEmail", $email, PDO::PARAM_STR);
+    $request->bindParam(":Email", $email, PDO::PARAM_STR);
     $request->execute();
 
     return $request->fetch(PDO::FETCH_ASSOC); 

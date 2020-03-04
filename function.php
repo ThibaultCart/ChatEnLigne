@@ -13,18 +13,13 @@ function GenerateRandomString($length = 10)
 
 
 // <editor-fold defaultstate="collapsed" desc="INSCRIPTION">
-function inscription($email, $pseudo, $mdp, $ladate)
+function inscription($email, $pseudo, $mdp)
 {
 
     $erreur = null;
     $mailDejautiliser = GetEmail($email);
     $pseudodejautiliser = GetPseudo($pseudo);
     $dataOk = true;
-    //changement du format de la date
-    $ladate2 = strtotime($ladate);
-
-    $ladate = date("Y-m-d", $ladate2);
-
 
     //on check si l'utilisateur n'est pas deja inscrit avec se mail et/ou se pseudo
     if ($mailDejautiliser != null) {
@@ -44,7 +39,7 @@ function inscription($email, $pseudo, $mdp, $ladate)
         //on crypte le mot de passe 
         $mdphash = Encrypt($mdp);
         // on appele la fonction qui ajoute les user dans la table
-        AddUser($email, $pseudo, $mdphash, $ladate);
+        AddUser($email, $pseudo, $mdphash);
     }
     //si une erreur a été detecter on la return si pas d'erreur on return null
     if ($erreur != null) {
@@ -84,7 +79,6 @@ function connexion($email, $mdpConnexion)
         // on recupere toutes le données de la base orrespondant a notre email
         $allinfo = GetInfoAll($email);
         var_dump($allinfo);
-        $salt = $allinfo["salt"];
         $mdphash = $allinfo["Password"];
         //on ajoute le sel et on hash le mots de passe saisie
         $ispswmatch = password_verify($mdpConnexion, $mdphash);
@@ -92,7 +86,7 @@ function connexion($email, $mdpConnexion)
         if ($ispswmatch == true) {
             // si ils sont identique on mets certaines valeur dans une variable de session et on redirige vers la page chat.php
             $_SESSION["Pseudo"] = $allinfo["Pseudo"];
-            $_SESSION["mail"] = $email;
+            $_SESSION["Email"] = $email;
             $_SESSION["idUser"] = $allinfo["idUser"];
 
             header("location:chat.php");
