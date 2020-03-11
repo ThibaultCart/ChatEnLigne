@@ -1,7 +1,4 @@
 <?php
-    if(!isset($_SESSION['username'])){
-        header("location:connexion.php");
-    }
 ?>
 
 <!DOCTYPE html>

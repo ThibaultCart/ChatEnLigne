@@ -1,15 +1,6 @@
+
 <?php
-//Permet de genérer un sel aléatoire
-function GenerateRandomString($length = 10)
-{
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
-}
+
 
 
 // <editor-fold defaultstate="collapsed" desc="INSCRIPTION">
@@ -17,8 +8,8 @@ function inscription($email, $pseudo, $mdp)
 {
 
     $erreur = null;
-    $mailDejautiliser = GetEmail($email);
-    $pseudodejautiliser = GetPseudo($pseudo);
+    $mailDejautiliser = GetAccountByEmail($email);
+    $pseudodejautiliser = GetAccountByUsername($pseudo);
     $dataOk = true;
 
     //on check si l'utilisateur n'est pas deja inscrit avec se mail et/ou se pseudo
@@ -68,7 +59,7 @@ function connexion($email, $mdpConnexion)
     if ($email != null || $mdpConnexion != null || $mdpConnexion != "" || $email != "") {
         $connexionPossible = false;
     }
-    $ismailValide = GetEmail($email);
+    $ismailValide = GetAccountByEmail($email);
     //check si un compte est lié a cet email
 
     if ($ismailValide != null) {
@@ -85,7 +76,7 @@ function connexion($email, $mdpConnexion)
         //on compare les deux mots de passe
         if ($ispswmatch == true) {
             // si ils sont identique on mets certaines valeur dans une variable de session et on redirige vers la page chat.php
-            $_SESSION["Pseudo"] = $allinfo["Pseudo"];
+            $_SESSION["username"] = $allinfo["username"];
             $_SESSION["Email"] = $email;
             $_SESSION["idUser"] = $allinfo["idUser"];
 

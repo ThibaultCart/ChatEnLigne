@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once "connexion.php";
+require_once "function.php";
 
 /**
  * Register a user.
@@ -14,14 +15,14 @@ require_once "connexion.php";
 function RegisterUser($email, $username, $password)
 {
 
-    $error=null;
+    $error = null;
     $mailAlreadyUsed = GetAccountByEmail($email);
     $usernameAlreadyUsed = GetAccountByUsername($username);
     $dataOk = true;
 
     // Check for email doublons
     if ($mailAlreadyUsed != null) {
-        $error="Another account uses this email.";
+        $error = "Another account uses this email.";
         $dataOk = false;
     }
     // Check for username doublons
@@ -29,20 +30,19 @@ function RegisterUser($email, $username, $password)
         $error = "This username is not available.";
         $dataOk = false;
     }
-    
+
     // No doublons found : Process of registration starts
     if ($dataOk == true) {
-        $salt = GenerateRandomString();
-        $encryptedPassword = Encrypt($password, $salt);
-        AddUser($email, $username, $encryptedPassword, $salt);
-    }
-    
-    if($error!=null){
-        return $error;
-    }else{
-        return null;
+
+        $encryptedPassword = Encrypt($password);
+        AddUser($email, $username, $encryptedPassword);
     }
 
+    if ($error != null) {
+        return $error;
+    } else {
+        return null;
+    }
 }
 
 
@@ -65,6 +65,7 @@ function GetAccountByUsername($username)
     return $request->fetch(PDO::FETCH_ASSOC);
 }
 
+
 /**
  * Add a user to the database
  * @param $email
@@ -74,41 +75,21 @@ function GetAccountByUsername($username)
  * @param $date
  * @return array
  */
-function AddUser($email, $username, $password, $salt)
+function AddUser($email, $username, $password)
 {
-    $sql = "INSERT INTO `user`(`username`, `email`, `Password`, `salt`)
-            VALUES(:username, :email, :password, :salt)";
+    $sql = "INSERT INTO `user`(`username`, `email`, `password`)
+            VALUES(:username, :email, :password)";
 
     $request = connect()->prepare($sql);
     $request->bindParam(":username", $username, PDO::PARAM_STR);
     $request->bindParam(":email", $email, PDO::PARAM_STR);
     $request->bindParam(":password", $password, PDO::PARAM_STR);
-    $request->bindParam(":email", $email, PDO::PARAM_STR);
-    $request->bindParam(":salt", $salt, PDO::PARAM_STR);
     $request->execute();
 
     $result = $request->fetchAll(PDO::FETCH_ASSOC);
 
     return $result;
 }
-
-
-/**
- * Generate a random string
- * @param int $length Default length is 10, else the generated string can have a specified length
- * @return string
- */
-function GenerateRandomString($length = 10)
-{
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
-}
-
 
 /**
  * Get all data linked to an email
@@ -128,28 +109,12 @@ function GetAccountByEmail($email)
     return $request->fetch(PDO::FETCH_ASSOC);
 }
 
-
-/**
- * Encrypt the password with a specified salt
- * @param $password The password
- * @param $salt The specified salt
- * @return Encrypted password
- */
-function Encrypt($password, $salt)
-{
-    $concactPasswordSalt = $password . $salt;
-    $retour = sha1($concactPasswordSalt);
-
-    return $retour;
-}
-
-
 /**
  * Check fields and connect user if no errors are found.
  * @param $email
  * @param $passwordConnexion
  */
-function Connexion($email, $passwordConnexion)
+function TheConnexion($email, $passwordConnexion)
 {
 
     $valideConnexion = false;
@@ -162,31 +127,29 @@ function Connexion($email, $passwordConnexion)
     // Email validation
     if (GetAccountByEmail($email) != null) {
         $valideConnexion = true;
-
     }
     if ($valideConnexion == true) {
         $allinfo = GetInfoAll($email);
 
-        $salt = $allinfo["salt"];
-        $encryptedPassword = $allinfo["Password"];
-        $concMdpHash = $passwordConnexion . $salt;
-        $passwordSaisie = sha1($concMdpHash);
 
-        if ($passwordSaisie == $encryptedPassword) {
+        $encryptedPassword = $allinfo["password"];
+
+        $passwordSaisie = $passwordConnexion;
+$checkpassword=password_verify($passwordSaisie,$encryptedPassword);
+        if ($checkpassword==true) {
 
             $_SESSION["username"] = $allinfo["username"];
-            $_SESSION["mail"] = $email;
+            $_SESSION["email"] = $email;
             $_SESSION["idUser"] = $allinfo["idUser"];
 
-            header("location: http://localhost");
+            header("location:chat.php");
+           
         } else {
-            // 
+            
             echo '<script>alert("Votre adresse mail et le mot de passe de correspondent pas");</script>';
         }
-
     }
-
-
+    
 }
 
 /**
@@ -196,7 +159,7 @@ function Connexion($email, $passwordConnexion)
 function GetInfoAll($email)
 {
     // Get the user data
-    $sql = "SELECT `idUser`,`username`,`Password`,`salt` 
+    $sql = "SELECT `idUser`,`username`,`password`
     FROM `user`
     WHERE `email` = :email";
 
@@ -208,6 +171,3 @@ function GetInfoAll($email)
     // Return all results from the query
     return $request->fetch(PDO::FETCH_ASSOC);
 }
-
-
-?>

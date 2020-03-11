@@ -1,4 +1,5 @@
 <?php
+
 require_once "requete.php";
 ?>
 
@@ -22,7 +23,7 @@ if (isset($_POST["submitLogin"])) {
     if (is_null($emailLogin) || is_null($passwordLogin)) {
         echo '<script>alert("Merci de remplire les champs");</script>';
     } else {
-        connexion($emailLogin, $passwordLogin);
+        TheConnexion($emailLogin, $passwordLogin);
     }
 }
 
@@ -94,7 +95,7 @@ if (isset($_POST["submitRegisterUser"])) {
             <legend><h2>ChatUp</h2></legend>
             <button onclick="document.getElementById('id01').style.display = 'block'" style="width:500px;">Connexion</button>
             <br>
-            <button onclick="document.getElementById('id02').style.display = 'block'" style="width:500px;">RegisterUser</button>
+            <button onclick="document.getElementById('id02').style.display = 'block'" style="width:500px;">Inscription</button>
         </fieldset>
         <!---- Connection Form-->
         <div id="id01" class="modal">
