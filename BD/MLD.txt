@@ -1,0 +1,2 @@
+USER (idUser, username, email, password, salt)
+MESSAGE (idMessage, dateMessage, contenuMessage, #idUser)
