@@ -1,63 +1,30 @@
-// Basic JS server
-var express = require('express')();
-//var app = express();
-var http = require('http').createServer(express);
-// Passing http as a parameter in the implementation of socket io
-var io = require('socket.io')(http);
+var app = require('http').createServer(handler);
+var io = require('socket.io')(app);
+var fs = require('fs');
 
+app.listen(80);
 
-//express.use(express.static(__dirname + 'public'));
+function handler (req, res) {
+    fs.readFile(__dirname + '/chat.php',
+        function (err, data) {
+            if (err) {
+                res.writeHead(500);
+                return res.end('Error loading chat.php');
+            }
 
-// Sends the chat page as the return page
-express.get('/', function(req, res){
-    res.sendFile(__dirname + '/chat.php');
-});
+            res.writeHead(200);
+            res.end(data);
+        });
+}
 
-
-// Listener
-http.listen(80, function(){
-  console.log('listening on *:80');
-});
-
-
-
-io.on('connection', function(socket){
-
+io.on('connection', function (socket) {
     console.log('a user connected');
-
-    socket.on('connection', function(){
-        io.emit('new user connected');
-    });
-    
     socket.on('chat message', function(msg){
-        io.emit('chat message', msg);
+        console.log('chat message: ', msg);
     });
     socket.on('disconnect', function(){
-      console.log('user disconnected');
+        console.log('user disconnected');
     });
 
-    socket.on('chat message', function(msg){
-        console.log('message: ' + msg);
-    });
+
 });
-
-io.emit('some event', { 
-    someProperty: 'some value', 
-    otherProperty: 'other value' 
-}); // This will emit the event to all connected sockets
-
-
-/*
-
-Améliorations possibles :
-
-- Persistence des messages
-- Utilisateur
-- Annonces : <Utiliseur> a rejoint le chat / quitter le chat
-- Time Stamp
-- Afficher le dernier message (scroll always en bas par défaut)
-- Designe
-
-
-
-*/
