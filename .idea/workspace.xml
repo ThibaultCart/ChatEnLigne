@@ -73,6 +73,8 @@
       <workItem from="1580897906636" duration="66000" />
       <workItem from="1580974258549" duration="19000" />
       <workItem from="1582098875061" duration="4165000" />
+      <workItem from="1584616684028" duration="16000" />
+      <workItem from="1584616701598" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="fin de journée">
       <created>1580225891191</created>
@@ -123,10 +125,11 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="465" y="100" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1580897956902" />
-    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1580974275532">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="709" y="269" key="FileChooserDialogImpl" timestamp="1584616696376">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1580974275532" />
+    <state x="709" y="269" key="FileChooserDialogImpl/0.0.1920.1040/-1920.109.1920.1040@0.0.1920.1040" timestamp="1584616696376" />
     <state x="254" y="433" key="NewPhpFileDialog" timestamp="1580891752118">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

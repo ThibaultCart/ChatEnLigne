@@ -6,7 +6,7 @@ function connect(){
     static $myDb = null;
     $dbName = "bdchatup";
     $dbUser = "root";
-    $dbPass = "root";
+    $dbPass = "";
     if ($myDb === null) {
         try {
             $myDb = new PDO(
