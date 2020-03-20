@@ -12,25 +12,31 @@ function inscription($email, $pseudo, $mdp)
     $pseudodejautiliser = GetAccountByUsername($pseudo);
     $dataOk = true;
 
-    //on check si l'utilisateur n'est pas deja inscrit avec se mail et/ou se pseudo
-    if ($mailDejautiliser != null) {
-        //donne a la variable erreur l'erreur
-        $erreur = "Votre adresse mail est deja utilisé";
-        $dataOk = false;
-    }
-    if ($pseudodejautiliser != null) {
-        //donne a la variable erreur l'erreur
-        $erreur = "Votre Pseudo est deja utilisé";
-        $dataOk = false;
-    }
 
-    if ($dataOk == true) {
-        //si les enregistrements ne sont pas des doublons
+    if ($email == null || $pseudo == null || $mdp == null) {
+        $erreur = "Merci de saisir toutes le données ";
+        $dataOk = false;
+    } else {
+        //on check si l'utilisateur n'est pas deja inscrit avec se mail et/ou se pseudo
+        if ($mailDejautiliser != null) {
+            //donne a la variable erreur l'erreur
+            $erreur = "Votre adresse mail est deja utilisé";
+            $dataOk = false;
+        }
+        if ($pseudodejautiliser != null) {
+            //donne a la variable erreur l'erreur
+            $erreur = "Votre Pseudo est deja utilisé";
+            $dataOk = false;
+        }
 
-        //on crypte le mot de passe 
-        $mdphash = Encrypt($mdp);
-        // on appele la fonction qui ajoute les user dans la table
-        AddUser($email, $pseudo, $mdphash);
+        if ($dataOk == true) {
+            //si les enregistrements ne sont pas des doublons
+
+            //on crypte le mot de passe 
+            $mdphash = Encrypt($mdp);
+            // on appele la fonction qui ajoute les user dans la table
+            AddUser($email, $pseudo, $mdphash);
+        }
     }
     //si une erreur a été detecter on la return si pas d'erreur on return null
     if ($erreur != null) {
