@@ -58,7 +58,6 @@ node chat.js
 ```
 Vous devriez avoir ceci:
 ![GitHub Logo](https://i.imgur.com/L7ZBYq3.png)
-Format: ![Imgur](url)
 Cette image date d'avant la dernière modification du serveur Node.js. Le message obtenu est maintenant : 'Server started' pour déclarer le bon démarrage du serveur js et "Connected" pour déclaré la connection à la base de données.
 
 
