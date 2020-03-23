@@ -28,7 +28,7 @@ con.connect(function(err) {
 
 
 // /!\ Change 'localhost' into 'xx.xxx.x.xxx' <- Your local ip or the one of your server
-app.listen(8039, '192.168.1.131');
+app.listen(8039, 'localhost');
 
 function handler (req, res) {
     fs.readFile(__dirname + '/chat.php',
