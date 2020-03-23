@@ -39,7 +39,7 @@ npm install socket.io
 ## Résultat attendu 
 
 ![GitHub Logo](https://i.imgur.com/Ck6KkSt.png)
-Format: ![Imgur](url)
+
 
 (Il manque mysql dans l'image)
 
@@ -49,7 +49,7 @@ Format: ![Imgur](url)
 2. Ouvrez le terminal de commande à l'emplacement du projet. 
 
 ![GitHub Logo](https://i.imgur.com/8MAdNJC.png)
-Format: ![Imgur](url)
+
 
 3. Entrez 
 
