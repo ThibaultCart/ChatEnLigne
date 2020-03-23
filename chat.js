@@ -50,7 +50,7 @@ console.log('Server started');
 io.on('connection', function (socket) {
 
     // Event 0 : User just connected, this part sends historic only to this client
-    /*con.query("SELECT ContenuMessage, DateMessage, user.username FROM message JOIN user WHERE message.idUser=user.idUser", function
+    /*con.query("SELECT contenuMessage, dateMessage, user.username FROM message JOIN user WHERE message.idUser=user.idUser", function
         (err, result, fields) {
         if (err) throw err;
         console.log(result);
