@@ -19,10 +19,19 @@ ce lien : https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2
 Node.js est nécessasire afin de lancer Socket.io (la framework sur laquelle le chat est basé).
 Il suffit de télécharger Node.js sur votre poste ou sur votre serveur. (https://nodejs.org).
 
-### Express
+### Installation des modules Node.js 
+Dans le répertoire du projet, effectuez les points suivants.
+
+#### (Optionnel) Express
 ```sh
 npm install express
 ```
+
+### MySQL
+```sh
+npm install mysql
+```
+
 ### Socket.io
 ```sh
 npm install socket.io
