@@ -69,7 +69,7 @@ io.on('connection', function (socket) {
         var date = new Date().toISOString().slice(0, 19).replace('T', ' ');
         // Send query (notice the usage of placeholders, it's like bindParams in JS apparently)
         // Source -> https://stackoverflow.com/questions/35600813/when-to-use-and-as-placeholders-in-node-mysql-for-building-a-query
-        con.query("INSERT INTO message (DateMessage, ContenuMessage, idUser) " +
+        con.query("INSERT INTO message (dateMessage, contentMessage , idUser) " +
             "VALUES (?, ?, ?)",
             [
                 date.toString(),
