@@ -1,7 +1,14 @@
 <?php
+/*
+* Author(s)    :   Thibault, Douglas, Mayara
+* File         :   connexion.php
+* Project      :   ChatUp
+* Description  :   Access MySQL Database
+* Last modif.  :   02.2020 by Thibault
+*/
 
 
-// Se connecter à la base de donnée
+// Connection to the Database
 function connect(){
     static $myDb = null;
     $dbName = "bdchatup";

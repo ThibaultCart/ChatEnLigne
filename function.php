@@ -1,5 +1,11 @@
-
 <?php
+/*
+* Author(s)    :   Thibault, Douglas, Mayara
+* File         :   function.php
+* Project      :   ChatUp
+* Description  :   Functions | PHP only
+* Last modif.  :   03.2020 by Thibault
+*/
 
 
 
@@ -86,7 +92,7 @@ function connexion($email, $mdpConnexion)
             $_SESSION["Email"] = $email;
             $_SESSION["idUser"] = $allinfo["idUser"];
 
-            header("location:chat.php");
+            header("location:http://192.168.1.131:8039");
         } else {
             // sinon on mets une alert comme quoi le mots de passe et le mail ne corresponde a aucun compte
             echo '<script>alert("Votre adresse mail et le mot de passe de correspondent pas");</script>';

@@ -3,6 +3,16 @@ session_start();
 require_once "connexion.php";
 require_once "function.php";
 
+/*
+ * Author(s)    :   Thibault, Douglas, Mayara
+ * File         :   requete.php
+ * Project      :   ChatUp
+ * Description  :   Queries | Access MySQL Database
+ * Last modif.  :   23.03.2020 by Douglas
+ */
+
+
+
 /**
  * Register a user.
  * Explicit : Checks if the user exists, and calls AddUser.
