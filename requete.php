@@ -144,8 +144,8 @@ function TheConnexion($email, $passwordConnexion)
 
         $encryptedPassword = $allinfo["password"];
 
-        $passwordSaisie = $passwordConnexion;
-$checkpassword=password_verify($passwordSaisie,$encryptedPassword);
+            $passwordSaisie = $passwordConnexion;
+            $checkpassword=password_verify($passwordSaisie,$encryptedPassword);
         if ($checkpassword==true) {
 
             $_SESSION["username"] = $allinfo["username"];

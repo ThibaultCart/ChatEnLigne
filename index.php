@@ -21,7 +21,7 @@ if (isset($_POST["submitLogin"])) {
     $passwordLogin = filter_input(INPUT_POST, 'passwordLogin', FILTER_SANITIZE_STRING);
     
     if (is_null($emailLogin) || is_null($passwordLogin)) {
-        echo '<script>alert("Merci de remplire les champs");</script>';
+        echo '<script>alert("Merci de remplir les champs");</script>';
     } else {
         TheConnexion($emailLogin, $passwordLogin);
     }
@@ -47,7 +47,7 @@ if (isset($_POST["submitRegisterUser"])) {
     }
 
     // Check : Email is an email
-    if (filter_var($emailLogin, FILTER_VALIDATE_EMAIL)) {
+    if (filter_var($emailLogin, FILTER_VALIDATE_EMAIL)&&is_null($emailLogin)==false&&$emailLogin!="") {
 
     } else {
         $valid = false;
@@ -59,8 +59,6 @@ if (isset($_POST["submitRegisterUser"])) {
 
         echo '<script>alert("One or multiple fields are empty.");</script>';
         $valid = false;
-    } else {
-        $valid = true;
     }
 
     // Security : Erase all data stored in POST

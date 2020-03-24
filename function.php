@@ -57,7 +57,7 @@ function inscription($email, $pseudo, $mdp)
 function Encrypt($mdp)
 {
     $retour = password_hash($mdp, PASSWORD_DEFAULT);
-    echo $retour;
+  
     return $retour;
 }
 
