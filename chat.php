@@ -20,8 +20,7 @@
         var socket = io.connect();
 
         // Submission of new message
-        $(function () {
-
+        $(function (){
             $("#chat-input").keypress(function (e) {
                 if(e.which == 13) {
                     //submit form via ajax, this is not JS but server side scripting so not showing here
@@ -58,7 +57,7 @@
             socket.on('connection', function(msg){
                 // Display message in chatbox
                 var b = $('<b></b>');
-                b.text('A user has disconnected.');
+                b.text('A user has connected.');
                 $('#chat-container').append(b);
             });
 
@@ -76,35 +75,31 @@
         body{
             height:500px;
             overflow: hidden;
-            margin:10%;
-            min-height: 500px;
+            min-height: 400px;
         }
         form{
             margin:auto;
-            height: 80%;
-
+            height: 100%;
+            width:50%;
+        }
+        #chat-container li{
+            background-color: white;
         }
 
-        fieldset h2{
-            text-align: center;
-            color:white;
-            background-color:inherit;
-        }
         fieldset{
             margin:auto;
             left: 0;
             top: 0;
-            width: 70%; /* Full width */
+            width: 100%; /* Full width */
             height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-
-            border:1px solid white;
+            overflow: hidden; /* Enable scroll if needed */
+            border:1px solid #4CAF50;
             border-radius: 1px;
-            background-color:rgb(43,43,43);
 
             padding: 15px;
+        }
+        legend{
+            color: #4CAF50;
         }
 
         .msg, .msg *{
@@ -132,41 +127,37 @@
             width:100%;
             height:10%;
             padding:0px;
-            margin-top:1px;
-            margin-bottom: 1px;
-            border-radius: 5px;
+            margin-top:10px;
             resize: vertical;
             max-height: 60px;
             background-color: white;
+            border:none;
 
         }
-        #chat-submit{
-            border:1px solid black;
-            text-align: center;
-            outline:0;
-            min-width: 130px;
-            height: 10%;
-            width:100%;
-            margin:0px;
-            padding:0px;
-            background-color: white;
-            transition:0.3s;
+        #chat-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
         }
 
-        #chat-submit:hover{
-            background-color: #0c0c0c;
-            color:white;
-
+        #chat-submit:hover {
+            opacity: 0.8;
         }
+
 
         #chat-container{
             width:100%;
-            height:60%;
+            height:65%;
             background-color:whitesmoke;
             overflow: auto;
             border:1px solid white;
             border-radius: 5px;
             margin:0px;
+
         }
         #side-container li{
             list-style:none;
@@ -181,6 +172,7 @@
         }
         nav{
             width: auto;
+            top:0;
         }
         nav ul{
             list-style: none;
@@ -204,23 +196,22 @@
 <body>
 <nav>
     <ul>
-        <li><a href="http://192.168.1.131/index.php">Connexion</a></li>
+        <li><a href="http://92.106.80.71/ChatEnLigne-master/index.php">Deconnexion</a></li>
     </ul>
 </nav>
 
 <form>
     <fieldset>
-        <h2>Chat</h2>
+        <legend><h2>ChatUp</h2></legend>
+
         <div id="chat-container">
             <li class="msg message-odd ">
-                <span><i class="username">Sony</i> <i class="date"> (10.03.2020 - 13:36)</i></span>
-                <br>
-                <i class="msg-content ">I ain't your bruh, mate.</i>
+                <i> Bienvenue au chat !</i>
             </li>
 
         </div>
         <textarea  id="chat-input"></textarea>
-        <input type="submit" id="chat-submit" value="Send">
+        <input type="submit" id="chat-submit" value="Envoyer">
     </fieldset>
 
 </form>
